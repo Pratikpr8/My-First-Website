@@ -1,0 +1,326 @@
+/* Importing a font from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/* Resetting the default padding and margin to edit it as per need */    
+*{
+    padding:0;
+    margin:0;
+}
+
+/* For Smooth scrolling through the page */
+html{
+    scroll-behavior: smooth;
+}
+
+.logo {
+    width:20%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    
+}
+.logo img{
+    width:70%;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.navbar{
+
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    position:sticky;
+    top:0;
+    cursor:pointer;
+    
+    
+}
+
+.nav-list{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav-list li{
+
+    list-style:none;
+
+    padding: 25px 34px;
+
+}
+
+.nav-list li a {
+
+    text-decoration: none;
+    color:white;
+
+}
+
+/* Hover Effect */
+
+.nav-list li a:hover {
+
+
+    color:gray;
+
+}
+
+.rightnav {
+    width: 30%;
+    text-align:right;
+    padding: 0 20px;
+
+}
+
+#search {
+    padding: 5px;
+    font-size:17px;
+    border:2px solid gray;
+    border-radius: 9px;
+
+}
+
+/*Blending the image in the background */
+
+.background {
+    background: rgba(0,0,0,0.7) url("images/avicii-mainbg.jpg");
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+/*Apllying various CSS properties to different elements in the webite*/
+
+.box-main {
+    display:flex;
+    max-width: 50%;
+    justify-content: center;
+    align-items:center;
+    color:white;
+    margin:auto;
+    height: 70%;
+    /*font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.firstSection{
+    height:100vh;
+}
+
+.firsthalf {
+    width:80%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.secondhalf img {
+
+    width: 150%;
+    border: 4px solid whitesmoke;
+    border-radius: 5%;
+    display: inline;
+    margin:auto;
+    
+}
+
+.text-big{
+    font-size:35px;
+    margin: 12px 0;
+    
+}
+
+.text-small{
+    font-size:18px;
+}
+
+.btn {
+    padding: 5px 14px;
+    margin: 8px 2px;
+    border: 2px solid gray;
+    border-radius: 8px;
+    background: none;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    }
+
+.btn:hover{
+        background-color: gray;
+    }
+
+.btn-dark{
+        color:black;
+        border:2px solid black;
+    }
+
+.btn-sm {
+
+    vertical-align: middle;
+    padding: 4px 18px;
+
+}
+
+.section{
+    display:flex;
+    
+    align-items:center;
+    justify-content:center;
+    max-width: 80%;
+    justify-content: space-evenly;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+.secLeft{
+    
+    flex-direction: row-reverse;
+}
+
+
+
+.paraImage{
+    width:430px;
+    height:350px;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+
+.paras{
+
+    border:2px solid #8d510be1;
+    border-radius: 15px;
+    padding: 0px 31px;
+    background-color: seashell;
+    margin: 17px 20px
+   
+}
+
+.contact {
+    background-color:tan;
+    height:80vh;
+    font-family: 'Raleway', sans-serif;
+}
+
+.text-center{
+    text-align: center;
+    padding: 15px 0;
+    
+}
+
+.form{
+    margin: 40px auto;
+    max-width: 60%;
+}
+
+.form-input{
+    width: 100%;
+    padding: 8px 8px;
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    margin: 5px 0;
+    font-family: 'Raleway', sans-serif;
+
+} 
+
+.text-footer{
+
+    text-align: center;
+    font-weight: bold;
+    padding:30px 0;
+    font-family: 'Raleway', sans-serif;
+    display:flex;
+    justify-content: center;
+    color:wheat;
+    
+}
+.burger{
+    display: none;
+    position: absolute;
+    cursor:pointer;
+    right: 5%;
+    top:15px;
+}
+.line{
+    width: 33px;
+    background-color: white;
+    height: 4px;
+    margin: 5px 3px;
+}
+
+
+
+/* Creating the website responsive and saying apply
+the media queries when the max-width reaches 1300px */
+
+@media only screen and (max-width:1300px) {
+    
+    /* flex-direction will change to column to adjust to the site */
+    .nav-list{
+        flex-direction: column;
+    }
+
+    .navbar{
+        height: 480px;
+        flex-direction: column;
+        transition: all 0.7s ease-out; 
+    }
+
+    .rightnav{
+        text-align: center;
+    }
+
+    #search{
+        width:100%;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .h-nav{
+        height: 70px;
+    }
+
+    .v-class{
+        opacity: 0;
+    }
+
+    .box-main{
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+
+    .secondhalf{
+        text-align: center;
+    }
+    .secondhalf img {
+        width: 50%;
+    }
+
+    .section {
+        flex-direction: column-reverse;
+    }
+
+    .text-big{
+        text-align: center;
+    }
+
+    .text-small{
+        text-align: center;
+    }
+
+    .button{
+        text-align: center;
+    }
+
+    .paraImage{
+        width:100%;
+    }
+
+}   
