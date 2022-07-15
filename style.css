@@ -77,10 +77,19 @@ html{
 }
 
 #search {
+    border: 2px solid lightgray;
+    border-radius: 6px;
+    margin: 5px 0;
+    font-family: 'Raleway', sans-serif;
+    outline: none;
     padding: 5px;
-    font-size:17px;
-    border:2px solid gray;
-    border-radius: 9px;
+
+}
+
+#search:focus{
+    transition: border-color 100ms;
+    border-color: gray ;
+    box-shadow: 0 0 5px 0 gray;
 
 }
 
@@ -116,6 +125,8 @@ html{
     display:flex;
     flex-direction: column;
     justify-content: center;
+    animation: title-enter 500ms;
+
 }
 
 
@@ -126,6 +137,8 @@ html{
     border-radius: 5%;
     display: inline;
     margin:auto;
+
+    animation: image-enter 500ms;
     
 }
 
@@ -147,10 +160,17 @@ html{
     background: none;
     color: white;
     font-family: 'Raleway', sans-serif;
+    cursor: pointer;
     }
 
 .btn:hover{
-        background-color: gray;
+        color: white;
+        background-color: black;
+        box-shadow: 0 0 5px 0 gray;
+        animation: shake 500ms;
+        transform:scale(1.3);
+        
+
     }
 
 .btn-dark{
@@ -164,6 +184,9 @@ html{
     padding: 4px 18px;
 
 }
+
+
+
 
 .section{
     display:flex;
@@ -225,8 +248,16 @@ html{
     border-radius: 6px;
     margin: 5px 0;
     font-family: 'Raleway', sans-serif;
-
+    outline: none;
 } 
+
+.form-input:focus{
+    transition: border-color 100ms;
+    border-color: gray ;
+    box-shadow: 0 0 5px 0 gray;
+
+
+}
 
 .text-footer{
 
@@ -254,6 +285,31 @@ html{
 }
 
 
+/* Animations */
+
+@keyframes shake{
+    25%{
+        transform: rotate(5deg);
+
+    }
+    75%{
+        transform: rotate(-5deg);
+
+    }
+}
+
+@keyframes title-enter{
+    from{
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes image-enter{
+    from{
+        transform: translateX(100vw);
+    }
+}
+
 
 /* Creating the website responsive and saying apply
 the media queries when the max-width reaches 1300px */
@@ -265,9 +321,14 @@ the media queries when the max-width reaches 1300px */
         flex-direction: column;
     }
 
+    .logo{
+        margin-left: 20px;
+    }
+
     .navbar{
         height: 480px;
         flex-direction: column;
+        align-items: center;
         transition: all 0.7s ease-out; 
     }
 
@@ -276,6 +337,8 @@ the media queries when the max-width reaches 1300px */
     }
 
     #search{
+        margin-bottom:15px;
+        margin-left: 8px;
         width:100%;
     }
 
